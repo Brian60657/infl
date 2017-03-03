@@ -1,27 +1,27 @@
 <%= form_for(user) do |f| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  <!-- <% if user.errors.any? %> -->
+    <!-- <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2> -->
 
-      <ul>
+      <!-- <ul>
       <% user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
-  <% end %>
+  <% end %> -->
 
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.label :Name %><br>
+    <%= f.text_field :name %><br><br>
   </div>
 
   <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.label :Email %><br>
+    <%= f.text_field :email %><br><br>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit %><br><br>
   </div>
 <% end %>

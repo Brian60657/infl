@@ -16,33 +16,33 @@ end
     # store all emails in lowercase to avoid duplicates and case-sensitive login errors:
     @user.email.downcase!
 
-    respond_to do |format|
-          if @user.save
-            format.html { redirect_to @user, notice: 'User was successfully created.' }
-            format.json { render :show, status: :created, location: @user }
-          else
-            format.html { render :new }
-            format.json { render json: @user.errors, status: :unprocessable_entity }
-          end
-        end
-      end
+    # respond_to do |format|
+    #       if @user.save
+    #         format.html { redirect_to @user, notice: 'User was successfully created.' }
+    #         format.json { render :show, status: :created, location: @user }
+    #       else
+    #         format.html { render :new }
+    #         format.json { render json: @user.errors, status: :unprocessable_entity }
+    #       end
+    #     end
+    #   end
 
 
-  #   if @user.save
-  #     # If user saves in the db successfully:
-  #     flash[:notice] = "Account created successfully!"
-  #     redirect_to root_path
-  #   else
-  #     # If user fails model validation - probably a bad password or duplicate email:
-  #     flash.now.alert = "Oops, couldn't create account. Please make sure you are using a valid email and password and try again."
-  #     render :new
-  #   end
-  # end
+    if @user.save
+      # If user saves in the db successfully:
+      flash[:notice] = "Account created"
+      redirect_to root_path
+    else
+      # If user fails model validation - probably a bad password or duplicate email:
+      flash.now.alert = "Please make sure you are using a valid email and password and try again"
+      render :new
+    end
+  end
 
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to @user, notice: 'User was updated' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ end
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to users_url, notice: 'User was deleted' }
       format.json { head :no_content }
     end
   end

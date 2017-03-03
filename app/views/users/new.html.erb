@@ -8,23 +8,23 @@
 
 <%= form_for @user do |f| %>
   <div>
-    <%= f.label :name %>
-    <%= f.text_field :name, autofocus: true %>
+    <%= f.label :Name %><br>
+    <%= f.text_field :name, autofocus: true %><br><br>
   </div>
   <div>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.label :Email %><br>
+    <%= f.text_field :email %><br><br>
   </div>
 
   <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= f.label :Password %><br>
+    <%= f.password_field :password %><br><br>
   </div>
   <div>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
+    <%= f.label :Password_confirmation %><br>
+    <%= f.password_field :password_confirmation %><br><br>
   </div>
   <div>
-    <%= f.submit "Sign up!" %>
+    <%= f.submit "Sign up!" %><br><br>
   </div>
 <% end %>
