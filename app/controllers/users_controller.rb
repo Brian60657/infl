@@ -31,7 +31,7 @@ end
     if @user.save
       # If user saves in the db successfully:
       flash[:notice] = "Account created"
-      redirect_to root_path
+      redirect_to new_post_path
     else
       # If user fails model validation - probably a bad password or duplicate email:
       flash.now.alert = "Please make sure you are using a valid email and password and try again"
