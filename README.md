@@ -28,3 +28,29 @@ A user will sign up for an account and login to input the appropriate location i
 
 ### ERD:
 ![alt text](app/assets/ERD.jpg)
+
+### Link to application:
+https://nameless-meadow-65615.herokuapp.com/
+
+### Technologies used:
+Ruby on Rails
+HTML
+CSS
+Heroku
+GitHub
+Trello
+
+### Approach taken:
+1. Created models
+2. Created controllers
+3. Created views
+4. Added login/authorization
+5. Added User/Post functions
+
+### Installation instructions:
+???
+
+### Unsolved problems and next steps:
+1. FINISH
+2. Routes were difficult for me
+3. Authenticating who can edit posts
