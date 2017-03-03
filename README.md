@@ -48,7 +48,11 @@ Trello
 5. Added User/Post functions
 
 ### Installation instructions:
-???
+Clone repository using GitHub
+Install gems (bundle install)
+Create and migrate the postgresql database.
+Open Rails server(Rails S)
+Open:localhost:3000 in a browser
 
 ### Unsolved problems and next steps:
 1. FINISH
