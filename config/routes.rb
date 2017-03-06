@@ -10,12 +10,12 @@ Rails.application.routes.draw do
     delete "/logout" => "sessions#destroy"
 
 
-    get "posts/" => "posts#index"
-    get "posts/new" => "posts#new", as: :new_post
-    post "posts/" => "posts#create"
-    get "posts/:id/edit" => "posts#edit", as: :edit_post
-    patch "posts/:id" => "posts#update"
-    get "posts/:id" => "posts#show", as: :post
-    delete "posts/:id" => "posts#destroy"
+    get "users/:user_id/posts/" => "posts#index" as: :posts
+    get "users/:user_id/posts/new" => "posts#new", as: :new_post
+    post "users/:user_id/posts/" => "posts#create"
+    get "users/:user_id/posts/:id/edit" => "posts#edit", as: :edit_post
+    patch "users/:user_id/posts/:id" => "posts#update"
+    get "users/:user_id/posts/:id" => "posts#show", as: :post
+    delete "users/:user_id/posts/:id" => "posts#destroy"
 
 end
