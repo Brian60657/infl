@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-    root "posts#index"
+    root "sessions#new"
 
     get "users/new" => "users#new", as: :new_user
     get "users/:id" => "users#show", as: :user
