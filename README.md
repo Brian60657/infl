@@ -32,11 +32,11 @@ A user will sign up for an account and login to input the appropriate location i
 https://nameless-meadow-65615.herokuapp.com/
 
 ### Technologies used:
-Ruby on Rails
-HTML
-Heroku
-GitHub
-Trello
+1. Ruby on Rails
+2. HTML
+3. Heroku
+4. GitHub
+5. Trello
 
 ### Approach taken:
 1. Created models
@@ -53,6 +53,6 @@ Trello
 5. Open:localhost:3000 in a browser
 
 ### Unsolved problems and next steps:
-1. FINISH
-2. Routes were difficult for me
-3. Authenticating who can edit posts
+1. Routes were difficult, more study
+2. Authenticating who can edit posts
+3. Styling
