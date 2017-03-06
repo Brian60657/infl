@@ -8,7 +8,5 @@ Email:
 
 <hr>
 
-<%= link_to "Edit User", edit_user_path(@user) if @user == current_user %><br>
 <%= link_to "Delete User", user_path, method: :delete, data: { confirm: "Are you sure you want to delete user?"} if @user == current_user %><br>
-
-<% end %>
+<%= link_to "New Post", new_post_path(@user) %>

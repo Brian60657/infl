@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
 
       # save the user.id in that user's session cookie
       session[:user_id] = user.id.to_s
-      redirect_to new_post_path, notice: "Logged in!"
+      redirect_to user, notice: "Logged in!"
     else
 
       # if email or password is incorrect, re-render login page

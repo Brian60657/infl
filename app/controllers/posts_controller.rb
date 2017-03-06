@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @user = User.find(params[:user_id])
     @user = current_user
     @post = Post.new
   end
@@ -21,7 +22,7 @@ class PostsController < ApplicationController
   # @post = User.find(params[:user_id])
 
   if @post.save
-    redirect_to user_posts_path(@user, @post)
+    redirect_to posts_path(@user, @post)
   else
     render :new
   end
@@ -52,7 +53,7 @@ end
   private
     # use callbacks to share common setup or constraints between actions
     # def set_post
-    #  @post = Post.find(params[:id])
+    #  @post = Post.find(session[:user_id])
     # end
 
     # never trust parameters from the internet, only allow the white list through
