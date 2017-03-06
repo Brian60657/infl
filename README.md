@@ -45,7 +45,7 @@ Trello
 2. Created controllers
 3. Created views
 4. Added login/authorization
-5. Added User/Post functions
+5. Updated User/Post functions
 
 ### Installation instructions:
 Clone repository using GitHub
