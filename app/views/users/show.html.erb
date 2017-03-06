@@ -1,12 +1,12 @@
-<h1>Users</h1>
+<h1>Your account</h1>
 
 Name:
 <%= @user.name %><br>
 
 Email:
-<%= @user.email %><br>
+<%= @user.email %><br><br>
 
 <hr>
 
-<%= link_to "Delete User", user_path, method: :delete, data: { confirm: "Are you sure you want to delete user?"} if @user == current_user %><br>
-<%= link_to "New Post", new_post_path(@user) %>
+<%= link_to "New Post", new_post_path(@user) %> |
+<%= link_to "Delete Account", user_path, method: :delete, data: { confirm: "Are you sure you want to delete user?"} if @user == current_user %><br>

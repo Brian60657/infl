@@ -14,13 +14,13 @@
         <% if current_user %>
 
         <!-- logged in -->
-        <%= link_to "Home", root_path %>
+        <%= link_to "Home", login_path %>
         |
         <%= link_to "Log Out", logout_path, method: :delete %>
     <% else %>
 
         <!-- not logged in -->
-        <%= link_to "Home", root_path %>
+        <%= link_to "Home", login_path %>
         |
         <%= link_to "Sign Up", new_user_path %>
         <% end %>
