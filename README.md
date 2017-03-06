@@ -12,9 +12,9 @@ A user will sign up for an account and login to input the appropriate location i
 - Delete user account
 
 **Basic *features* will include:**
-- Line status logged by button clicks
-- Sorting locations by line status
-- Privacy controls for user
+- Maintain privacy for user
+- Simple navigation
+- Easy to read
 
 ### User stories:<b>
 [Trello](https://trello.com/b/5vEUV6Ga/influencer)
