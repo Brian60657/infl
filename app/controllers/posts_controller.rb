@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  # before_action :set_post, only: [:show, :edit, :update, :destroy, :create]
 
   def index
     @posts = Post.all
@@ -19,7 +18,6 @@ class PostsController < ApplicationController
   def create
   @user = User.find(params[:user_id])
   @post = Post.create(post_params)
-  # @post = User.find(params[:user_id])
 
   if @post.save
     redirect_to posts_path(@user, @post)
@@ -51,12 +49,7 @@ end
   end
 
   private
-    # use callbacks to share common setup or constraints between actions
-    # def set_post
-    #  @post = Post.find(session[:user_id])
-    # end
-
-    # never trust parameters from the internet, only allow the white list through
+    
     def post_params
       params.require(:post).permit(:title, :body, :user_id)
     end

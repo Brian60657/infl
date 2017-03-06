@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+
     # look-up User in db by the email address submitted to the login form
     # convert to lowercase to match email in db in case they had caps lock on
     user = User.find_by(email: params[:login][:email].downcase)
@@ -24,9 +25,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+
     # delete the saved user_id key/value from the cookie
     session.delete(:user_id)
     redirect_to login_path, notice: "Logged out!"
   end
-
 end

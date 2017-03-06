@@ -2,6 +2,6 @@ class User < ApplicationRecord
   has_secure_password
   has_many :posts, dependent: :destroy
 
-  # Verify that email field is not blank and that it doesn't already exist in the db (prevents duplicates):
+  # verify that email field is not blank and that it doesn't already exist in the db
   validates :email, presence: true, uniqueness: true
 end

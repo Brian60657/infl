@@ -63,5 +63,4 @@ end
     # that can be submitted by a form to the user model #=> require(:user)
     params.require(:user).permit(:name, :email, :password, :password_confirmation, posts_attributes:[:id, :body, :title])
   end
-
 end
