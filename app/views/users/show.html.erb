@@ -1,5 +1,5 @@
 <h1>
-    <%= @user.user_name %>
+    <%= @user.name %>
 </h1>
 
 Name:
@@ -13,9 +13,7 @@ Body:
 
 <hr>
 
-<% end %>
-
 <%= link_to "Edit User", edit_user_path(@user) if @user == current_user %><br>
 <%= link_to "User's List", users_path %><br>
 <%= link_to "Delete User", user_path, method: :delete, data: { confirm: "Are you sure you want to delete user?"} if @user == current_user %><br>
-<%= link_to "New Post", new_user_post_path(@user) if @user == current_user %>
+<%= link_to "New Post", new_post_path(@user) if @user == current_user %>
