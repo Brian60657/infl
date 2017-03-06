@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       # if user saves in the db successfully
       flash[:notice] = "Account created!"
       session[:user_id] = @user.id
-      redirect_to new_user_post_path
+      redirect_to new_post_path
     else
 
       # if user fails model validation

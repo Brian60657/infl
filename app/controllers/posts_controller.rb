@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy, :create]
+  # before_action :set_post, only: [:show, :edit, :update, :destroy, :create]
 
   def index
     @posts = Post.all
   end
 
   def new
-    @user = User.find(params[:user_id])
+    @user = current_user
     @post = Post.new
   end
 
@@ -16,9 +16,9 @@ class PostsController < ApplicationController
   end
 
   def create
-  @user = User.find(params[:user_id])
+  # @user = User.find(params[:user_id])
   @post = Post.create(post_params)
-  @post.user_id = @user.id
+  @post = User.find(params[:user_id])
 
   if @post.save
     redirect_to user_posts_path(@user, @post)
@@ -51,9 +51,9 @@ end
 
   private
     # use callbacks to share common setup or constraints between actions
-    def set_post
-      @post = Post.find(params[:id])
-    end
+    # def set_post
+    #  @post = Post.find(params[:id])
+    # end
 
     # never trust parameters from the internet, only allow the white list through
     def post_params

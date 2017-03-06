@@ -3,25 +3,25 @@
 <%= form_for @user, url: {action: "update", method: "patch"} do |f| %>
 
 <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br><br>
 </div>
 
 <div>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %><br><br>
 </div>
 
 <div>
-    <%= f.label :update_password %>
-    <%= f.password_field :password %>
+    <%= f.label :update_password %><br>
+    <%= f.password_field :password %><br><br>
 </div>
 
 <div>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation %><br><br>
 </div>
 
-<%= f.submit "Submit Edit" %>
+<%= f.submit "Submit Edit" %><br><br>
 
 <% end %>

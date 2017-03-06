@@ -1,13 +1,14 @@
 <h1>Posts</h1>
 
-Title:
+Establishment:
 <%= @post.title %><br>
-Date:
-<%= @post.date %><br>
-Time:
-<%= @post.time %><br>
-Body:
+
+Line Length (None, Small, Large):
 <%= @post.body %><br>
 
-<%= link_to "Edit Post", edit_user_post_path(@post) if @user == current_user %>
-<%= link_to "Delete Post", user_post_path, method: :delete, data: { confirm: "Are you sure you to delete this post?"} if @user == current_user %>
+<hr>
+
+<%= link_to "Edit Post", edit_post_path(@post) if @user == current_user %>
+<%= link_to "Delete Post", post_path, method: :delete, data: { confirm: "Are you sure you to delete this post?"} if @user == current_user %>
+
+<% end %>
