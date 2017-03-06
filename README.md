@@ -24,7 +24,6 @@ A user will sign up for an account and login to input the appropriate location i
 ![alt text](app/assets/2.jpg)
 ![alt text](app/assets/3.jpg)
 ![alt text](app/assets/4.jpg)
-![alt text](app/assets/5.jpg)
 
 ### ERD:
 ![alt text](app/assets/ERD.jpg)
