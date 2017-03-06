@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Influencer</title>
-    <%= csrf_meta_tags %>
+    <head>
+        <title>Influencer</title>
+        <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+        <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+        <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    </head>
 
-  <body>
+    <body>
 
-    <!-- show nav links -->
-    <% if current_user %>
-      <!-- current_user will return true if a user is logged in -->
-    <%= link_to 'Home', root_path %> | <%= link_to 'Log Out', logout_path, method: :delete %>
+        <!-- show nav links -->
+        <% if current_user %>
+
+        <!-- logged in -->
+        <%= link_to "Home", root_path %>
+        |
+        <%= link_to "Log Out", logout_path, method: :delete %>
     <% else %>
-      <!-- not logged in -->
-      <%= link_to 'Home', root_path %> | <%= link_to 'Sign Up', new_user_path %>
-    <% end %>
-    <hr>
-    <!-- end -->
 
-    <!-- show flash message if any: -->
-    <% if notice %>
-      <%= notice %>
-    <% end %>
+        <!-- not logged in -->
+        <%= link_to "Home", root_path %>
+        |
+        <%= link_to "Sign Up", new_user_path %>
+        <% end %>
 
-    <% if alert %>
-      <%= alert %>
-    <% end %>
-    <!-- end -->
+        <hr>
 
-    <%= yield %>
-  </body>
+        <!-- show flash messages -->
+        <% if notice %>
+        <%= notice %>
+        <% end %>
+
+        <% if alert %>
+        <%= alert %>
+        <% end %>
+
+        <%= yield %>
+    </body>
 </html>

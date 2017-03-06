@@ -1,29 +1,32 @@
 Rails.application.routes.draw do
 
+# secret page (not in use)
+  get "pages/secret"
 
+# set root (Heroku needs it)
+  root to: "users#show"
 
-  # Add a root route if you don't have one...
-  # We can use users#new for now, or replace this with the controller and action you want to be the site root:
-  root to: 'users#new'
+# posts
+  get "users/:user_id/posts/" => "posts#index", as: :all_posts
+  get "users/:user_id/posts/new" => "posts#new", as: :new_user_post
+  get "users/:user_id/posts/:id" => "posts#show", as: :user_post
+  post "users/:user_id/posts" => "posts#create", as: :user_posts
+  get "users/:user_id/posts/:id/edit" => "posts#edit", as: :edit_user_post
+  patch "users/:user_id/posts/:id" => "posts#update"
+  delete "users/:user_id/posts/:id" => "posts#destroy"
 
-  # sign up page with form:
-  get 'users/new' => 'users#new', as: :new_user
+# users
+  get "users/" => "users#index", as: :users
+  post "users/" => "users#create"
+  get "users/new" => "users#new", as: :new_user
+  get "users/:id" => "users#show", as: :user
+  get "users/:id/edit" => "users#edit", as: :edit_user
+  patch "users/:id" => "users#update"
+  delete "users/:id" => "users#destroy"
 
-  # create (post) action for when sign up form is submitted:
-  post 'users' => 'users#create'
-  # resources :posts
-  # log in page with form:
-  get '/login'     => 'sessions#new'
-
-  # create (post) action for when log in form is submitted:
-  post '/login'    => 'sessions#create'
-
-  # delete action to log out:
-  delete '/logout' => 'sessions#destroy'
-
-  resources :users do
-    resources :posts
-  end
-
+# login/logout
+  get "/login" => "sessions#new"
+  post "/login"    => "sessions#create"
+  delete "/logout" => "sessions#destroy"
 
 end

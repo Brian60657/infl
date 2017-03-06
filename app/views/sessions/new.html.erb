@@ -1,14 +1,19 @@
 <h1>Let's do this!</h1>
+
 <%= form_for :login do |f| %>
-  <div>
+
+<div>
     <%= f.label :Email %><br>
     <%= f.text_field :email, autofocus: true %><br><br>
-  </div>
-  <div>
+</div>
+
+<div>
     <%= f.label :Password %><br>
     <%= f.password_field :password %><br><br>
-  </div>
-  <div>
+</div>
+
+<div>
     <%= f.submit "Log In" %><br><br>
-  </div>
+</div>
+
 <% end %>
