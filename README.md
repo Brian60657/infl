@@ -35,7 +35,6 @@ https://nameless-meadow-65615.herokuapp.com/
 ### Technologies used:
 Ruby on Rails
 HTML
-CSS
 Heroku
 GitHub
 Trello
@@ -48,11 +47,11 @@ Trello
 5. Updated User/Post functions
 
 ### Installation instructions:
-Clone repository using GitHub
-Install gems (bundle install)
-Create and migrate the postgresql database.
-Open Rails server(Rails S)
-Open:localhost:3000 in a browser
+1. Clone repository using GitHub
+2. Install gems (bundle install)
+3. Create and migrate the postgresql database.
+4. Open Rails server(Rails S)
+5. Open:localhost:3000 in a browser
 
 ### Unsolved problems and next steps:
 1. FINISH
